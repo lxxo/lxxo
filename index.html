@@ -32,9 +32,9 @@
 
   <meta name="description" content="All those years&#39; journey">
 <meta property="og:type" content="website">
-<meta property="og:title" content="潜水的胖子">
+<meta property="og:title" content="lixiaoxu10.github.io">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="潜水的胖子">
+<meta property="og:site_name" content="lixiaoxu10.github.io">
 <meta property="og:description" content="All those years&#39; journey">
 <meta property="og:locale" content="zh_CH">
 <meta property="article:author" content="Li XiaoXu">
@@ -53,7 +53,7 @@
   };
 </script>
 
-  <title>潜水的胖子</title>
+  <title>lixiaoxu10.github.io</title>
   
 
 
@@ -104,7 +104,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">潜水的胖子</h1>
+      <h1 class="site-title">lixiaoxu10.github.io</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">我寻思着理想这玩意儿没啥用，就廉价卖给了生活。---《我在人间凑数的日子》</p>
@@ -181,6 +181,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/16/vueReturn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li XiaoXu">
+      <meta itemprop="description" content="All those years' journey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/16/vueReturn/" class="post-title-link" itemprop="url">vue监听浏览器返回事件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-16 20:31:43 / Modified: 20:32:35" itemprop="dateCreated datePublished" datetime="2021-11-16T20:31:43+08:00">2021-11-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue-js/" itemprop="url" rel="index"><span itemprop="name">vue.js</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/11/16/vueReturn/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/11/16/vueReturn/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="vue监听浏览器返回事件"><a href="#vue监听浏览器返回事件" class="headerlink" title="vue监听浏览器返回事件"></a>vue监听浏览器返回事件</h1><h3 id="Code-block"><a href="#Code-block" class="headerlink" title="Code block"></a>Code block</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">window</span>.history &amp;&amp; <span class="built_in">window</span>.history.pushState) &#123;</span><br><span class="line">    history.pushState(<span class="literal">null</span>, <span class="literal">null</span>, <span class="built_in">document</span>.URL)</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&quot;popstate&quot;</span>, <span class="built_in">this</span>.onCloseModal, <span class="literal">false</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">destroyed</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">window</span>.removeEventListener(<span class="string">&quot;popstate&quot;</span>, <span class="built_in">this</span>.onCloseModal, <span class="literal">false</span>)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">  <span class="function"><span class="title">onCloseModal</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 监听返回的处理</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CH">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/16/iosFormIsBlurBottonwhiteBlock/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -190,7 +272,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -277,7 +359,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -371,7 +453,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -465,7 +547,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -562,7 +644,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -643,7 +725,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="潜水的胖子">
+      <meta itemprop="name" content="lixiaoxu10.github.io">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -788,7 +870,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
