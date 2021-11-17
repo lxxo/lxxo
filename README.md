@@ -1,9 +1,9 @@
-<h1 align="center">Hi, I'm <a href="https://alili.tech/">{Li Yi}</a>!</h1>
+<h1 align="center">friend hello!</h1>
 <h1 align="center">a 𝑭𝒓𝒐𝒏𝒕-𝒆𝒏𝒅 𝑬𝒏𝒈𝒊𝒏𝒆𝒆𝒓  </h1>
 
 
 <p align="center">
-  <strong><a href="https://lixiaoxu10.github.io/">博客</a></strong>
+  <strong><a href="https://friendhello.github.io/">博客</a></strong>
 </p>
 
 
