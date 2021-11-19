@@ -181,6 +181,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/19/DESAndAES/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Li XiaoXu">
+      <meta itemprop="description" content="All those years' journey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="friendhello.github.io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/19/DESAndAES/" class="post-title-link" itemprop="url">DES+AES+Vue加密</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-19 09:17:59 / Modified: 09:19:03" itemprop="dateCreated datePublished" datetime="2021-11-19T09:17:59+08:00">2021-11-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue-js/" itemprop="url" rel="index"><span itemprop="name">vue.js</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/11/19/DESAndAES/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/11/19/DESAndAES/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Vue-DES-AES加密"><a href="#Vue-DES-AES加密" class="headerlink" title="Vue DES+AES加密"></a>Vue DES+AES加密</h1><h2 id="前端DES加密"><a href="#前端DES加密" class="headerlink" title="前端DES加密"></a>前端DES加密</h2><pre><code>    params: 要加密的字符串String
+    return: 加密后的字符串String
+    
+    use:
+        import &#123; desEncryption &#125; from &#39;x/x/x&#39;
+        desEncryption(String)
+
+    
+    
+</code></pre>
+<h3 id="DES-code"><a href="#DES-code" class="headerlink" title="DES code"></a>DES code</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> cryptoJS <span class="keyword">from</span> <span class="string">&quot;crypto-js&quot;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">desEncryption</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 密钥和后端协同定义的</span></span><br><span class="line">  <span class="keyword">var</span> keyHex = cryptoJS.enc.Base64.parse(<span class="string">&#x27;NPB2UKDYO/O&#x27;</span>); </span><br><span class="line">  <span class="built_in">console</span>.log(keyHex);</span><br><span class="line">  <span class="keyword">const</span> newText = cryptoJS.TripleDES.encrypt(</span><br><span class="line">      text,</span><br><span class="line">      keyHex,</span><br><span class="line">      &#123;</span><br><span class="line">          <span class="attr">mode</span>: cryptoJS.mode.ECB,</span><br><span class="line">          <span class="attr">padding</span>: cryptoJS.pad.Pkcs7 <span class="comment">//填充方式</span></span><br><span class="line">      &#125;</span><br><span class="line">  ).toString() || <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="keyword">return</span> newText;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/19/DESAndAES/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CH">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/18/bannerArrComputed/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -785,7 +884,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
