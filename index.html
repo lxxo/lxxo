@@ -548,10 +548,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-11-16 20:13:45 / Modified: 20:20:00" itemprop="dateCreated datePublished" datetime="2021-11-16T20:13:45+08:00">2021-11-16</time>
+              <time title="Created: 2021-11-16 20:13:45" itemprop="dateCreated datePublished" datetime="2021-11-16T20:13:45+08:00">2021-11-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-20 11:11:18" itemprop="dateModified" datetime="2021-11-20T11:11:18+08:00">2021-11-20</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -589,10 +595,10 @@
       
           <h1 id="ios-h5页面点击form表单软键盘底部白块问题"><a href="#ios-h5页面点击form表单软键盘底部白块问题" class="headerlink" title="(ios)h5页面点击form表单软键盘底部白块问题"></a>(ios)h5页面点击form表单软键盘底部白块问题</h1><blockquote>
 <ul>
-<li> 表单获取焦点时触发 将窗口弄回原位</li>
+<li> 表单失去焦点时触发 将窗口弄回原位</li>
 </ul>
 </blockquote>
-<h3 id="Code-block"><a href="#Code-block" class="headerlink" title="Code block"></a>Code block</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">blur () &#123;</span><br><span class="line">     	   <span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).scrollTo(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">   	&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Code-block"><a href="#Code-block" class="headerlink" title="Code block"></a>Code block</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">blur () &#123;</span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">&#x27;html&#x27;</span>).scrollTo(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">&#125;,</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 
       
     </div>
