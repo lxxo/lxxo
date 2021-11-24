@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <strong><a href="https://friendhello.github.io/">博客</a></strong>
+  <strong><a href="https://lxxo.github.io/">博客</a></strong>
 </p>
 
 
